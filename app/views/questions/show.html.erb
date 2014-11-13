@@ -1,0 +1,5 @@
+<%= @question.id %> - <%= @question.content %>
+
+<%= form_for @question.answer.new do |f| %>
+  <%= f.content %>
+<% end %>

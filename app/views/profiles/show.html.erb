@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @profile.user_name %>
+</p>
+
+<p>
+  <strong>FristName:</strong>
+  <%= @profile.first_name %>
+</p>
+
+
+<p>
+  <strong>LastName:</strong>
+  <%= @profile.last_name %>
+</p>
+
+
+<p>
+  <strong>Email:</strong>
+  <%= @profile.email %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @profile.mobile %>
+</p>
+
+<p>
+  <strong>DOB:</strong>
+  <%= @profile.date_of_birth %>
+</p>
+
+<h2>Your Friends</h2>
+<ul>
+  <% for friendship in @profile.friendships %>
+  <li>
+    <%= h friendship.friend.user_name %>
+    (<%= link_to "remove", friendship, :method => :delete %>)
+  </li>
+  <% end %>  
+</ul>
+
+<!-- <p>
+  <strong>Photo:</strong>
+<%= image_tag @profile.image_url(:thumb).to_s %>
+</p> -->
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>

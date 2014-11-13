@@ -1,0 +1,9 @@
+<p>Thank you for registering!</p>
+
+<p>Learin Via Online</p>
+
+<p><H1>Hi <%= @user.email %></H1></p>
+
+<p>Welcome to the Learn Via Online! Click on the link below to activate your account</p>
+
+<%= link_to "Activate", activate_account_url(controller: "registrations",:action => :activate_account, :id => @user.id, :activated => true, :activated_at => Date.new, :method => :get) %>
