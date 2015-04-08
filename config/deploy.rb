@@ -8,7 +8,7 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 set :application, 'learningapp'
 # set :repo_url, 'git@github.com:mohan589/learnviaonline.git'
 set :repo_url, '/media/mohan/softwares/LearingApp/LearingApp/.git'
-set :passenger_restart_with_sudo, true
+# set :passenger_restart_with_sudo, true
 # set :passenger_restart_command, 'passenger-config restart-app'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
