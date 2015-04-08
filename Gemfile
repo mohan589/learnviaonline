@@ -16,8 +16,11 @@ gem 'pry'
 gem 'carrierwave'
 gem 'friendly_id'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
-
+gem 'therubyracer',  platforms: :ruby
+gem 'capistrano', '~> 3.1'
+gem 'capistrano-rails'
+gem 'capistrano-rbenv', '~> 2.0'
+gem 'capistrano-passenger'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -27,15 +30,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-group :development do
-  gem 'capistrano-rails'
-  gem 'capistrano-rbenv', '~> 2.0', require: false
-end
+gem 'passenger', '~> 5.0.5'
 # gem "rmagick"
 
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'

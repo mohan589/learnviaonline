@@ -38,6 +38,8 @@ GEM
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-passenger (0.0.4)
+      capistrano (~> 3.0)
     capistrano-rails (1.1.2)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -77,6 +79,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    libv8 (3.16.14.7)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -88,6 +91,9 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
     orm_adapter (0.5.0)
+    passenger (5.0.5)
+      rack
+      rake (>= 0.8.1)
     polyglot (0.3.5)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -119,6 +125,7 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    ref (1.0.5)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -144,6 +151,9 @@ GEM
       colorize (>= 0.7.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    therubyracer (0.12.1)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -166,6 +176,9 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
+  capistrano (~> 3.1)
+  capistrano-passenger
   capistrano-rails
   capistrano-rbenv (~> 2.0)
   carrierwave
@@ -174,10 +187,12 @@ DEPENDENCIES
   friendly_id
   jbuilder (~> 2.0)
   jquery-rails
+  passenger (~> 5.0.5)
   pry
   rails (= 4.1.4)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   sqlite3
+  therubyracer
   tzinfo-data
   uglifier (>= 1.3.0)
