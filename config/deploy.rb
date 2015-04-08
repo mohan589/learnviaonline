@@ -25,7 +25,7 @@ set :user, "mohan"
 set :rails_env, "production"
 # set :rails_env, "staging"
 set :deploy_via, :copy
-set :use_sudo, false
+set :use_sudo, true
 set :releases_path, File.join(deploy_to)
 # Default value for :format is :pretty
 # set :format, :pretty
@@ -34,7 +34,7 @@ set :releases_path, File.join(deploy_to)
 # set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
 set :linked_files, %w{config/database.yml}
