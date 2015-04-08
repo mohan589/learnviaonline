@@ -6,8 +6,10 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all # default value
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 set :application, 'learningapp'
-set :repo_url, 'git@github.com:mohan589/learnviaonline.git'
-
+# set :repo_url, 'git@github.com:mohan589/learnviaonline.git'
+set :repo_url, '/media/mohan/softwares/LearingApp/LearingApp/.git'
+set :passenger_restart_with_sudo, true
+# set :passenger_restart_command, 'passenger-config restart-app'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
@@ -20,10 +22,11 @@ set :default_stage, "production"
 set :scm, :git
 set :branch, "master"
 set :user, "mohan"
+set :password, "mohan143"
 set :rails_env, "production"
 # set :rails_env, "staging"
 set :deploy_via, :copy
-set :use_sudo, false
+set :use_sudo, true
 set :releases_path, File.join(deploy_to)
 # Default value for :format is :pretty
 # set :format, :pretty
@@ -32,7 +35,7 @@ set :releases_path, File.join(deploy_to)
 # set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
 set :linked_files, %w{config/database.yml}
