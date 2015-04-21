@@ -15,6 +15,7 @@ gem 'devise'
 gem 'pry'
 gem 'carrierwave'
 gem 'friendly_id'
+gem 'activeadmin', github: 'activeadmin'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby
 gem 'capistrano', '~> 3.1'

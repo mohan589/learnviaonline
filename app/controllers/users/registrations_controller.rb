@@ -19,13 +19,17 @@ respond_to :html, :json
  #      end  
 	# end
 
+  def create
+    super
+  end
+
   def update
     super
     # redirect_to show
   end
 
   def show
-    @user = User.find(current_user.id)
+    @user = User.find(current_user.id) if current_user.present?
 
     if @user
       # redirect_to users_show_path

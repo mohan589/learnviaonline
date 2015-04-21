@@ -7,7 +7,7 @@ class Users::SessionsController < Devise::RegistrationsController
 	 	if @user && @user.activated
 	 		sign_in(resource_name, resource)
 			current_user = @user
-			redirect_to main_index_path
+			redirect_to admin_dashboard_path 
 		else
 			redirect_to new_user_session_path			
 		end

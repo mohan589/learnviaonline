@@ -10,6 +10,10 @@ set :application, 'learningapp'
 set :repo_url, '/media/mohan/softwares/LearingApp/LearingApp/.git'
 # set :passenger_restart_with_sudo, true
 # set :passenger_restart_command, 'passenger-config restart-app'
+
+# set :sudo, "sudo passenger-config restart-app --ignore-app-not-running #{deploy_to}"
+
+# Default branch is :master
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
